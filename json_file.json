@@ -1,0 +1,85 @@
+{
+  "students": [
+    {
+      "id_student": 1,
+      "fullname": "Петр Гринев",
+      "email": "petrg@gmail.com",
+      "password": "123454321",
+      "enrolled_courses": [1],
+      "test_results": {
+        "1": 2.0
+      }
+    }
+  ],
+  "courses": [
+    {
+      "id_course": 1,
+      "title": "Спидран подготовка к ЕГЭ за 3 дня",
+      "subject": "Математика",
+      "description": "Сдашь матешу за 3 дня подготовки",
+      "lessons": [1, 2, 3],
+      "tests": [1],
+      "reviews": [1]
+    }
+  ],
+  "lessons": [
+    {
+      "id_lesson": 1,
+      "title": "Квадратные уравнения",
+      "video_url": "https://Matesha.com/lesson1",
+      "homework": "1 уравнение с конца вебинара",
+      "course_id": 1,
+      "homework_answers": {
+        "1": "Решения отправлены!"
+      }
+    },
+    {
+      "id_lesson": 2,
+      "title": "Планиметрия 1-й части",
+      "video_url": "https://Matesha.com/lesson2",
+      "homework": "1 номер из пособия Ященко",
+      "course_id": 1,
+      "homework_answers": {}
+    }
+  ],
+  "tests": [
+    {
+      "id_test": 1,
+      "title": "Математика: основы",
+      "max_score": 3.0,
+      "course_id": 1,
+      "questions": {
+        "1": "Корни уравнения x ^ 2 - 4 = 0?",
+        "2": "Площадь квадрата со стороной 3?",
+        "3": "Сколько граней у куба?"
+      },
+      "correct_answers": {
+        "1": "+-2",
+        "2": "9",
+        "3": "6"
+      },
+      "results": {
+        "1": 2.0
+      }
+    }
+  ],
+  "reviews": [
+    {
+      "id_review": 1,
+      "student_id": 1,
+      "course_id": 1,
+      "rating": 4,
+      "comment": "Хорошо, но хотелось бы больше практики.",
+      "date": "2025-11-07T12:00:00"
+    }
+  ],
+  "schedules": [
+    {
+      "id_schedule": 1,
+      "course_id": 1,
+      "start_date": "2025-11-07",
+      "end_date": "2025-11-10",
+      "students": [1]
+    }
+  ]
+}
