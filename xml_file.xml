@@ -1,89 +1,64 @@
-<education_system>
-    <students>
-        <student id="1">
-            <fullname>Петр Гринев</fullname>
-            <email>petrg@gmail.com</email>
-            <password>123454321</password>
-            <enrolled_courses>
-                <course_id>1</course_id>
-            </enrolled_courses>
-            <test_results>
-                <result test_id="1">2.0</result>
-            </test_results>
-        </student>
-    </students>
-
-    <courses>
-        <course id="1">
-            <title>Спидран подготовка к ЕГЭ за 3 дня</title>
-            <subject>Математика</subject>
-            <description>Сдашь матешу за 3 дня подготовки</description>
-            <lessons>
-                <lesson_id>1</lesson_id>
-                <lesson_id>2</lesson_id>
-                <lesson_id>3</lesson_id>
-            </lessons>
-            <tests>
-                <test_id>1</test_id>
-            </tests>
-            <reviews>
-                <review_id>1</review_id>
-            </reviews>
-        </course>
-    </courses>
-
-    <lessons>
-        <lesson id="1" course_id="1">
-            <title>Квадратные уравнения</title>
-            <video_url>https://Matesha.com/lesson1</video_url>
-            <homework>1 уравнение с конца вебинара</homework>
+<?xml version="1.0" encoding="UTF-8"?>
+<students>
+  <student>
+    <id_student>1</id_student>
+    <fullname>Петр Гринев</fullname>
+    <email>petrg@gmail.com</email>
+    <password>123454321</password>
+    <enrolled_courses>
+      <course>
+        <id_course>1</id_course>
+        <title>Python для начинающих</title>
+        <subject>Программирование</subject>
+        <description>Базовый курс по Python: синтаксис, структуры данных, функции.</description>
+        <lessons>
+          <lesson>
+            <id_lesson>1</id_lesson>
+            <title>Введение в Python</title>
+            <video_url>https://example.com/videos/python_intro</video_url>
+            <homework>Напишите функцию, которая возвращает сумму списка чисел.</homework>
             <homework_answers>
-                <answer student_id="1">Решения отправлены!</answer>
+              <answer student_id="1">def sum_list(lst):
+    return sum(lst)</answer>
             </homework_answers>
-        </lesson>
-
-        <lesson id="2" course_id="1">
-            <title>Планиметрия 1-й части</title>
-            <video_url>https://Matesha.com/lesson2</video_url>
-            <homework>1 номер из пособия Ященко</homework>
-        </lesson>
-    </lessons>
-
-    <tests>
-        <test id="1" course_id="1">
-            <title>Математика: основы</title>
-            <max_score>3.0</max_score>
+          </lesson>
+        </lessons>
+        <tests>
+          <test>
+            <id_test>1</id_test>
+            <title>Базовый тест по синтаксису</title>
             <questions>
-                <question id="1">Корни уравнения x ^ 2 - 4 = 0?</question>
-                <question id="2">Площадь квадрата со стороной 3?</question>
-                <question id="3">Сколько граней у куба?</question>
+              <question>
+                <id_q>1</id_q>
+                <text>Что выведет выражение: print(2 * 3)?</text>
+                <type>single_choice</type>
+                <options>
+                  <option>5</option>
+                  <option>6</option>
+                  <option>23</option>
+                </options>
+                <answer>6</answer>
+              </question>
             </questions>
-            <correct_answers>
-                <answer question_id="1">+-2</answer>
-                <answer question_id="2">9</answer>
-                <answer question_id="3">6</answer>
-            </correct_answers>
-            <results>
-                <result student_id="1">2.0</result>
-            </results>
-        </test>
-    </tests>
-
-    <reviews>
-        <review id="1" student_id="1" course_id="1">
+          </test>
+        </tests>
+        <reviews>
+          <review>
+            <id_review>1</id_review>
+            <student>
+              <id_student>1</id_student>
+              <fullname>Петр Гринев</fullname>
+            </student>
             <rating>4</rating>
-            <comment>Хорошо, но хотелось бы больше практики.</comment>
-            <date>2025-11-07T12:00:00</date>
-        </review>
-    </reviews>
-
-    <schedules>
-        <schedule id="1" course_id="1">
-            <start_date>2025-11-07</start_date>
-            <end_date>2025-11-10</end_date>
-            <students>
-                <student_id>1</student_id>
-            </students>
-        </schedule>
-    </schedules>
-</education_system>
+            <comment>Полезный курс, особенно практика с задачами.</comment>
+            <date>2025-11-08T12:00:00</date>
+          </review>
+        </reviews>
+      </course>
+    </enrolled_courses>
+    <test_results>
+      <result test_id="1">2.0</result>
+      <result test_id="2">3.0</result>
+    </test_results>
+  </student>
+</students>
