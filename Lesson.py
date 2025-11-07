@@ -1,5 +1,8 @@
+from Exceptions import HomeworkError
+
+
 class Lesson:
-    def __init__(self, id_lesson : int, title : str, video_url : str, homework : str, course):
+    def __init__(self, id_lesson: int, title: str, video_url: str, homework: str, course):
         self.id_lesson = id_lesson
         self.title = title
         self.video_url = video_url
@@ -10,10 +13,14 @@ class Lesson:
 
     def go_to_lesson(self) -> str:
         if self.video_url:
-            return f'Урок: {self.title}\nВидеоурок: {self.video_url}'
-        else:
-            return f'Ссылка не работает'
+            return f"Урок: {self.title}\nВидеоурок: {self.video_url}"
+        return "Ссылка не работает."
 
-    def submit_homework(self, student, answer : str) -> str:
+    def submit_homework(self, student, answer: str) -> str:
+        if not answer.strip():
+            raise HomeworkError("Домашнее задание не может быть пустым.")
         self.homework_answers[student] = answer
-        return "Ответ на домашнее задание отправлен"
+        return "Ответ на домашнее задание отправлен."
+
+    def __str__(self):
+        return f"Урок: {self.title} (Ссылка: {self.video_url or 'нет'})"

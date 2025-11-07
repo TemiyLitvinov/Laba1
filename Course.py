@@ -1,5 +1,5 @@
 class Course:
-    def __init__(self, id_course : int, title : str, subject : str, description : str):
+    def __init__(self, id_course: int, title: str, subject: str, description: str):
         self.id_course = id_course
         self.title = title
         self.subject = subject
@@ -16,12 +16,10 @@ class Course:
         if test not in self.tests:
             self.tests.append(test)
 
-    def calculate_average_score(self):
-        if not self.reviews:
-            return 0.0
-        return sum(r.rating for r in self.reviews) / len(self.reviews)
-
     def get_average_rating(self) -> float:
         if not self.reviews:
             return 0.0
         return sum(r.rating for r in self.reviews) / len(self.reviews)
+
+    def __str__(self):
+        return f"Курс: {self.title} — предмет: {self.subject} ({len(self.lessons)} уроков, {len(self.tests)} тестов)"
