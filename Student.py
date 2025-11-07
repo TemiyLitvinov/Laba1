@@ -17,7 +17,7 @@ class Student:
 
     def take_test(self, test, answers: dict):
         result = test.evaluate(answers)
-        self.test_results[test.id] = result
+        self.test_results[test.id_test] = result
         return result
 
     def view_progress(self) -> float:

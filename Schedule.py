@@ -15,15 +15,15 @@ class Schedule:
     def add_student(self, student):
         if student not in self.students:
             self.students.append(student)
-            print(f"Обучающийся {student.name} добавлен в расписание курса '{self.course.title}'.")
+            print(f"Обучающийся {student.fullname} добавлен в расписание курса '{self.course.title}'.")
         else:
-            print(f"Обучающийся {student.name} уже записан на этот курс.")
+            print(f"Обучающийся {student.fullname} уже записан на этот курс.")
 
     def notify_students(self, lesson: str, lesson_time: datetime, video_url: str):
 
         print(f"Уведомление о начале урока '{lesson}' курса '{self.course.title}':")
         for student in self.students:
-            print(f" - {student.name}, вебинар начинается {lesson_time.strftime('%d.%m.%Y %H:%M')}.")
+            print(f" - {student.fullname}, вебинар начинается {lesson_time.strftime('%d.%m.%Y %H:%M')}.")
             print(f"   Ссылка на урок: {video_url}\n")
 
     def get_schedule_info(self) -> str:
